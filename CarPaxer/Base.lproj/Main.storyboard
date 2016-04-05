@@ -110,7 +110,7 @@
                                 <state key="normal" title="PAX!"/>
                                 <connections>
                                     <action selector="paxbutton:" destination="hgT-oU-elL" eventType="touchUpInside" id="9o5-61-DjI"/>
-                                    <segue destination="i3Z-un-b82" kind="show" id="7BE-h2-I0c"/>
+                                    <segue destination="i3Z-un-b82" kind="show" identifier="fullSegue" id="7BE-h2-I0c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-fQ-pbj">
@@ -118,7 +118,7 @@
                                 <state key="normal" title="PAX! (om bilen är full)"/>
                                 <connections>
                                     <action selector="carfull:" destination="hgT-oU-elL" eventType="touchUpInside" id="u4w-1Z-R17"/>
-                                    <segue destination="i3Z-un-b82" kind="show" id="B0H-qu-EKo"/>
+                                    <segue destination="i3Z-un-b82" kind="show" identifier="paxSegue" id="B0H-qu-EKo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-dm-dQE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-dm-dQE">
                                 <rect key="frame" x="20" y="72" width="560" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

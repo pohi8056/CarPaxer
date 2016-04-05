@@ -14,21 +14,11 @@ class CarPaxerViewController: UIViewController {
     
     @IBAction func paxbutton(sender: UIButton) {
         paxbool = true
-        if paxbool {
-            print ("You have paxed!")
-        }
-        else {
-            print("The car is full!")
-        }
     }
 
     @IBAction func carfull(sender: UIButton) {
         paxbool = false
-        if paxbool {
-            print ("You have paxed!")
-        }
-        else {
-            print("The car is full!")
-        }
     }
+    
+    
 }

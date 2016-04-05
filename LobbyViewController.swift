@@ -9,11 +9,7 @@
 import UIKit
 
 class LobbyViewController: UIViewController {
-    
+
     @IBOutlet weak var answer: UILabel!
-    
-    //if paxbool {
-    //    answer.text = "BRA!"
-    //}
-    
+   
 }
