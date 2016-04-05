@@ -6,5 +6,18 @@
 //  Copyright © 2016 PonyCorp Inc. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
+class UserInfo{
+    
+    var hasCar: Bool
+    var hasReservedSeat: Bool
+    var car: CarInfo
+    
+    init(hasCar: Bool, hasReservedSeat: Bool, car: CarInfo){
+        self.hasCar = hasCar
+        self.hasReservedSeat = false
+        self.car = car
+    }
+    
+}
