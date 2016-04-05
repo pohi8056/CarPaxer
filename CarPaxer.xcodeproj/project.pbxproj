@@ -15,6 +15,7 @@
 		3AFBB6191CB4347E002AB93C /* CarPaxerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6181CB4347E002AB93C /* CarPaxerTests.swift */; };
 		3AFBB6241CB4347E002AB93C /* CarPaxerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6231CB4347E002AB93C /* CarPaxerUITests.swift */; };
 		3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */; };
+		3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6331CB439B0002AB93C /* DriverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3AFBB6231CB4347E002AB93C /* CarPaxerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPaxerUITests.swift; sourceTree = "<group>"; };
 		3AFBB6251CB4347E002AB93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPaxerViewController.swift; sourceTree = "<group>"; };
+		3AFBB6331CB439B0002AB93C /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				3AFBB6031CB4347D002AB93C /* AppDelegate.swift */,
 				3AFBB6051CB4347D002AB93C /* ViewController.swift */,
 				3AFBB6071CB4347D002AB93C /* Main.storyboard */,
+				3AFBB6331CB439B0002AB93C /* DriverViewController.swift */,
 				3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */,
 				3AFBB60A1CB4347D002AB93C /* Assets.xcassets */,
 				3AFBB60C1CB4347D002AB93C /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */,
 				3AFBB6061CB4347D002AB93C /* ViewController.swift in Sources */,
 				3AFBB6041CB4347D002AB93C /* AppDelegate.swift in Sources */,
 				3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */,
