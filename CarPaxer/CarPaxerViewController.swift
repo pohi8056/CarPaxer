@@ -10,15 +10,14 @@ import UIKit
 
 class CarPaxerViewController: UIViewController {
 
-    var paxbool = false
+    var pax = false
     
     @IBAction func paxbutton(sender: UIButton) {
-        paxbool = true
+        pax = true
     }
 
     @IBAction func carfull(sender: UIButton) {
-        paxbool = false
+        pax = false
     }
-    
     
 }
