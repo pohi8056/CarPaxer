@@ -22,14 +22,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier = "toDriverView"{
-                let DriverViewController = segue.destinationViewController as DriverViewController
-                DriverViewController.newName = nameField.text
-            
+        if segue.identifier == "toDriverView" {
+            let driverViewController = segue.destinationViewController as! DriverViewController
+            driverViewController.newName = nameField.text!
         }
     }
-*/
+
 }
 

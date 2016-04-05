@@ -15,7 +15,7 @@ class DriverViewController: UIViewController {
     var newName : String = "Welcome, "
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMsg.text = newName
+        welcomeMsg.text = "Welcome, \(newName)"
         // Do any additional setup after loading the view.
     }
 
