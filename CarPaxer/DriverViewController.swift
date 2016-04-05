@@ -10,9 +10,12 @@ import UIKit
 
 class DriverViewController: UIViewController {
 
+    @IBOutlet weak var welcomeMsg: UILabel!
+    
+    var newName : String = "Welcome, "
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        welcomeMsg.text = newName
         // Do any additional setup after loading the view.
     }
 
