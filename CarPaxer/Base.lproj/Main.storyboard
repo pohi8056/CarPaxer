@@ -27,14 +27,14 @@
                                 <rect key="frame" x="313" y="110" width="33" height="30"/>
                                 <state key="normal" title="User"/>
                                 <connections>
-                                    <segue destination="hgT-oU-elL" kind="show" id="9gv-XE-yob"/>
+                                    <segue destination="hgT-oU-elL" kind="show" identifier="toUserView" id="9gv-XE-yob"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-Cs-qmS">
                                 <rect key="frame" x="254" y="110" width="42" height="30"/>
                                 <state key="normal" title="Driver"/>
                                 <connections>
-                                    <segue destination="1na-sk-PnQ" kind="show" id="Oe6-jB-umo"/>
+                                    <segue destination="1na-sk-PnQ" kind="show" identifier="toDriverView" id="Krp-ds-qm8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l6f-GC-mJg"/>
+                    <connections>
+                        <outlet property="nameField" destination="m4G-dM-OnI" id="wk3-qs-tNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,8 +69,19 @@
                     <view key="view" contentMode="scaleToFill" id="ial-Jg-zvV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome msg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-qZ-Z3d">
+                                <rect key="frame" x="20" y="64" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeMsg" destination="ONA-qZ-Z3d" id="HA2-wI-dWo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfs-bB-0Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
