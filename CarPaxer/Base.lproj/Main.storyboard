@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-JO-q2e">
-                                <rect key="frame" x="261" y="285" width="78" height="30"/>
-                                <state key="normal" title="UserButton"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4G-dM-OnI">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69m-G9-1Fx">
+                                <rect key="frame" x="313" y="110" width="33" height="30"/>
+                                <state key="normal" title="User"/>
                                 <connections>
-                                    <segue destination="hgT-oU-elL" kind="show" identifier="showSecondViewController" id="ept-eN-aF4"/>
+                                    <segue destination="hgT-oU-elL" kind="show" id="9gv-XE-yob"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPC-C5-i5F">
-                                <rect key="frame" x="112" y="285" width="87" height="30"/>
-                                <state key="normal" title="DriverButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-Cs-qmS">
+                                <rect key="frame" x="254" y="110" width="42" height="30"/>
+                                <state key="normal" title="Driver"/>
                                 <connections>
-                                    <segue destination="1na-sk-PnQ" kind="show" id="atk-Nh-1dc"/>
+                                    <segue destination="1na-sk-PnQ" kind="show" id="Oe6-jB-umo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9mv-Cs-qmS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="234" id="KgU-aA-QBe"/>
+                            <constraint firstItem="69m-G9-1Fx" firstAttribute="top" secondItem="m4G-dM-OnI" secondAttribute="bottom" constant="8" id="UJN-UQ-zNy"/>
+                            <constraint firstItem="m4G-dM-OnI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bNj-PU-P7L"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="m4G-dM-OnI" secondAttribute="leading" id="d3C-LH-b64"/>
+                            <constraint firstItem="9mv-Cs-qmS" firstAttribute="top" secondItem="m4G-dM-OnI" secondAttribute="bottom" constant="8" id="fyG-2C-TCd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="69m-G9-1Fx" secondAttribute="trailing" constant="234" id="hlZ-p9-LEc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m4G-dM-OnI" secondAttribute="trailing" id="tB3-TJ-YoU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l6f-GC-mJg"/>
                 </viewController>
