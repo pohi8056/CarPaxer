@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-JO-q2e">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <state key="normal" title="UserButton"/>
                                 <connections>
                                     <segue destination="hgT-oU-elL" kind="show" identifier="showSecondViewController" id="ept-eN-aF4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPC-C5-i5F">
-                                <rect key="frame" x="132" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="112" y="285" width="87" height="30"/>
+                                <state key="normal" title="DriverButton"/>
                                 <connections>
                                     <segue destination="1na-sk-PnQ" kind="show" id="atk-Nh-1dc"/>
                                 </connections>
