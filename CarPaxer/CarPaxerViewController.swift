@@ -10,10 +10,25 @@ import UIKit
 
 class CarPaxerViewController: UIViewController {
 
-    
+    var paxbool = false
     
     @IBAction func paxbutton(sender: UIButton) {
-        print("Jag paxar!!!")
+        paxbool = true
+        if paxbool {
+            print ("You have paxed!")
+        }
+        else {
+            print("The car is full!")
+        }
     }
 
+    @IBAction func carfull(sender: UIButton) {
+        paxbool = false
+        if paxbool {
+            print ("You have paxed!")
+        }
+        else {
+            print("The car is full!")
+        }
+    }
 }

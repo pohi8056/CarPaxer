@@ -94,11 +94,21 @@
                                     <segue destination="i3Z-un-b82" kind="show" id="7BE-h2-I0c"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-fQ-pbj">
+                                <rect key="frame" x="175" y="409" width="148" height="30"/>
+                                <state key="normal" title="PAX! (om bilen är full)"/>
+                                <connections>
+                                    <action selector="carfull:" destination="hgT-oU-elL" eventType="touchUpInside" id="u4w-1Z-R17"/>
+                                    <segue destination="i3Z-un-b82" kind="show" id="B0H-qu-EKo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4uL-fQ-pbj" firstAttribute="leading" secondItem="hJP-HI-Vi7" secondAttribute="leadingMargin" constant="155" id="GPp-dh-84q"/>
                             <constraint firstItem="8zC-F0-Es8" firstAttribute="top" secondItem="AgW-9N-ICV" secondAttribute="bottom" constant="236" id="T1k-mF-ieK"/>
                             <constraint firstItem="8zC-F0-Es8" firstAttribute="leading" secondItem="hJP-HI-Vi7" secondAttribute="leadingMargin" constant="233" id="bdZ-4I-bnz"/>
+                            <constraint firstItem="4uL-fQ-pbj" firstAttribute="top" secondItem="8zC-F0-Es8" secondAttribute="bottom" constant="49" id="yGq-Fc-VrB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -106,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1354" y="-226"/>
         </scene>
-        <!--View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="fQI-IF-YO4">
             <objects>
-                <viewController id="i3Z-un-b82" sceneMemberID="viewController">
+                <viewController id="i3Z-un-b82" customClass="LobbyViewController" customModule="CarPaxer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jFb-Tg-SHe"/>
                         <viewControllerLayoutGuide type="bottom" id="PTr-eB-yw8"/>
@@ -117,8 +127,19 @@
                     <view key="view" contentMode="scaleToFill" id="fiY-Wk-CSY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-dm-dQE">
+                                <rect key="frame" x="20" y="72" width="560" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="answer" destination="c7G-dm-dQE" id="vkB-bj-Wpc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVZ-W5-qqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,4 +164,7 @@
             <point key="canvasLocation" x="-240" y="57"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B0H-qu-EKo"/>
+    </inferredMetricsTieBreakers>
 </document>

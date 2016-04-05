@@ -16,6 +16,7 @@
 		3AFBB6241CB4347E002AB93C /* CarPaxerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6231CB4347E002AB93C /* CarPaxerUITests.swift */; };
 		3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */; };
 		3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6331CB439B0002AB93C /* DriverViewController.swift */; };
+		63BCBF1B1CB445DE00A4CAD7 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3AFBB6251CB4347E002AB93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPaxerViewController.swift; sourceTree = "<group>"; };
 		3AFBB6331CB439B0002AB93C /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
+		63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = ../LobbyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,10 @@
 		3AFBB6021CB4347D002AB93C /* CarPaxer */ = {
 			isa = PBXGroup;
 			children = (
-				3AFBB6031CB4347D002AB93C /* AppDelegate.swift */,
-				3AFBB6051CB4347D002AB93C /* ViewController.swift */,
 				3AFBB6071CB4347D002AB93C /* Main.storyboard */,
+				3AFBB6031CB4347D002AB93C /* AppDelegate.swift */,
+				63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */,
+				3AFBB6051CB4347D002AB93C /* ViewController.swift */,
 				3AFBB6331CB439B0002AB93C /* DriverViewController.swift */,
 				3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */,
 				3AFBB60A1CB4347D002AB93C /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */,
+				63BCBF1B1CB445DE00A4CAD7 /* LobbyViewController.swift in Sources */,
 				3AFBB6061CB4347D002AB93C /* ViewController.swift in Sources */,
 				3AFBB6041CB4347D002AB93C /* AppDelegate.swift in Sources */,
 				3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */,
@@ -490,6 +494,7 @@
 				3AFBB62A1CB4347E002AB93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AFBB62B1CB4347E002AB93C /* Build configuration list for PBXNativeTarget "CarPaxerTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				3AFBB62D1CB4347E002AB93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AFBB62E1CB4347E002AB93C /* Build configuration list for PBXNativeTarget "CarPaxerUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +512,7 @@
 				3AFBB6301CB4347E002AB93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
