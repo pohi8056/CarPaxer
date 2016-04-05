@@ -10,6 +10,8 @@ import UIKit
 
 class CarPaxerViewController: UIViewController {
 
+    
+    
     @IBAction func paxbutton(sender: UIButton) {
         print("Jag paxar!!!")
     }
