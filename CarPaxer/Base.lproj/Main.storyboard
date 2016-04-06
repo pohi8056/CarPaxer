@@ -276,57 +276,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available seats left: X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS7-Y2-ot6">
-                                <rect key="frame" x="20" y="195" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="131" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-drive hangout of XXX's car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rya-wO-pUc">
-                                <rect key="frame" x="20" y="72" width="560" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER1, USER2, ..., USERN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOL-rf-oCw">
-                                <rect key="frame" x="20" y="138" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rya-wO-pUc">
+                                <rect key="frame" x="20" y="72" width="560" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paxed users:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpm-nC-Hpb">
-                                <rect key="frame" x="20" y="109" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="193" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HsA-FJ-blq">
-                                <rect key="frame" x="20" y="240" width="560" height="2"/>
-                                <rect key="contentStretch" x="0.0" y="0.5" width="1" height="1"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yM2-r5-msF">
+                                <rect key="frame" x="161" y="237" width="279" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="iBA-io-2KK"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NPh-za-SgR" customClass="PassengerTableViewCell" customModule="CarPaxer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="279" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NPh-za-SgR" id="gXS-cy-HEX">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passenger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCP-S5-Al9">
+                                                    <rect key="frame" x="8" y="10" width="78" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tCP-S5-Al9" firstAttribute="centerY" secondItem="gXS-cy-HEX" secondAttribute="centerY" id="IST-p6-VIf"/>
+                                                <constraint firstItem="tCP-S5-Al9" firstAttribute="leading" secondItem="gXS-cy-HEX" secondAttribute="leadingMargin" id="Rl4-os-uFf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="passengerName" destination="tCP-S5-Al9" id="cTb-qU-LjH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-Os-Ehr">
+                                <rect key="frame" x="20" y="174" width="560" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GS7-Y2-ot6" firstAttribute="top" secondItem="eOL-rf-oCw" secondAttribute="bottom" constant="36" id="0ms-WH-gtT"/>
-                            <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="Rya-wO-pUc" secondAttribute="bottom" constant="8" id="CKS-y9-UC7"/>
+                            <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="GS7-Y2-ot6" secondAttribute="bottom" constant="38" id="84E-X2-ked"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="HTf-IF-Qoo"/>
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="LfT-c8-wfR"/>
-                            <constraint firstItem="HsA-FJ-blq" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="Ns4-MP-8RG"/>
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="PVx-X2-x0K"/>
-                            <constraint firstItem="eOL-rf-oCw" firstAttribute="top" secondItem="wpm-nC-Hpb" secondAttribute="bottom" constant="8" id="RUS-0L-a2O"/>
-                            <constraint firstItem="eOL-rf-oCw" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="VMQ-oP-gJC"/>
+                            <constraint firstItem="Jhw-Os-Ehr" firstAttribute="leading" secondItem="wpm-nC-Hpb" secondAttribute="leading" id="QFz-7C-J9u"/>
+                            <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="Jhw-Os-Ehr" secondAttribute="bottom" constant="17" id="Rpe-Ds-hJf"/>
+                            <constraint firstItem="yM2-r5-msF" firstAttribute="top" secondItem="wpm-nC-Hpb" secondAttribute="bottom" constant="20.5" id="St2-zY-ZKa"/>
+                            <constraint firstItem="yM2-r5-msF" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="T63-HS-lJ8"/>
+                            <constraint firstItem="PTr-eB-yw8" firstAttribute="top" secondItem="yM2-r5-msF" secondAttribute="bottom" constant="63" id="beO-xb-iCD"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="bhf-Rx-XbJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rya-wO-pUc" secondAttribute="trailing" id="fIZ-ye-rRK"/>
+                            <constraint firstItem="Jhw-Os-Ehr" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="g2C-Fq-R8i"/>
                             <constraint firstItem="Rya-wO-pUc" firstAttribute="top" secondItem="jFb-Tg-SHe" secondAttribute="bottom" constant="8" id="jCp-9t-QBD"/>
-                            <constraint firstItem="HsA-FJ-blq" firstAttribute="top" secondItem="GS7-Y2-ot6" secondAttribute="bottom" constant="24" id="lXu-FF-5H7"/>
-                            <constraint firstItem="HsA-FJ-blq" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="szj-2A-6vT"/>
-                            <constraint firstItem="eOL-rf-oCw" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="tQB-p6-828"/>
+                            <constraint firstItem="GS7-Y2-ot6" firstAttribute="top" secondItem="Rya-wO-pUc" secondAttribute="bottom" constant="26" id="nZ2-MO-EPF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Rya-wO-pUc" secondAttribute="leading" id="wr4-P6-REH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="availableSeatsLeftText" destination="GS7-Y2-ot6" id="WYc-WH-cZf"/>
+                        <outlet property="availableSeatsLeftText" destination="GS7-Y2-ot6" id="dIK-iG-dW5"/>
                         <outlet property="hangoutName" destination="Rya-wO-pUc" id="30w-zT-ZS4"/>
-                        <outlet property="usersInRoom" destination="eOL-rf-oCw" id="Fsj-mo-zct"/>
+                        <outlet property="progressBar" destination="Jhw-Os-Ehr" id="NVp-WT-ycI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVZ-W5-qqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
