@@ -12,6 +12,9 @@ class DriverViewController: UIViewController {
 
     @IBOutlet weak var welcomeMsg: UILabel!
     
+    @IBOutlet weak var numberOfSeats: UISlider!
+    
+    
     var newName : String = "Welcome, "
     override func viewDidLoad() {
         super.viewDidLoad()
