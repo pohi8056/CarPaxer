@@ -10,6 +10,6 @@ import UIKit
 
 class LobbyViewController: UIViewController {
 
+    
     @IBOutlet weak var answer: UILabel!
-   
 }

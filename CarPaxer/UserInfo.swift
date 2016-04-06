@@ -6,7 +6,7 @@
 //  Copyright © 2016 PonyCorp Inc. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class UserInfo{
 
