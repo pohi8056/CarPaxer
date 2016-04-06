@@ -13,10 +13,6 @@ class DriversTableViewCell: UITableViewCell {
     @IBOutlet weak var driverName: UILabel!
     @IBOutlet weak var availableSeats: UILabel!
     
-    @IBAction func paxButton(sender: UIButton) {
-        
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

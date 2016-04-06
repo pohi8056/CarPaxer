@@ -14,13 +14,13 @@
 		3AFBB60E1CB4347D002AB93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFBB60C1CB4347D002AB93C /* LaunchScreen.storyboard */; };
 		3AFBB6191CB4347E002AB93C /* CarPaxerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6181CB4347E002AB93C /* CarPaxerTests.swift */; };
 		3AFBB6241CB4347E002AB93C /* CarPaxerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6231CB4347E002AB93C /* CarPaxerUITests.swift */; };
-		3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */; };
 		3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6331CB439B0002AB93C /* DriverViewController.swift */; };
 		3AFBB6361CB47332002AB93C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6351CB47332002AB93C /* UserInfo.swift */; };
 		3AFBB6381CB4736E002AB93C /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6371CB4736E002AB93C /* CarInfo.swift */; };
 		63BCBF1B1CB445DE00A4CAD7 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */; };
 		63BCBF1D1CB482B300A4CAD7 /* DriversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1C1CB482B300A4CAD7 /* DriversTableViewCell.swift */; };
 		63BCBF1F1CB4909F00A4CAD7 /* DriversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1E1CB4909F00A4CAD7 /* DriversTableViewController.swift */; };
+		63BCBF271CB4ACB900A4CAD7 /* PaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF261CB4ACB900A4CAD7 /* PaxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +54,13 @@
 		3AFBB61F1CB4347E002AB93C /* CarPaxerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarPaxerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFBB6231CB4347E002AB93C /* CarPaxerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPaxerUITests.swift; sourceTree = "<group>"; };
 		3AFBB6251CB4347E002AB93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPaxerViewController.swift; sourceTree = "<group>"; };
 		3AFBB6331CB439B0002AB93C /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
 		3AFBB6351CB47332002AB93C /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3AFBB6371CB4736E002AB93C /* CarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 		63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = ../LobbyViewController.swift; sourceTree = "<group>"; };
 		63BCBF1C1CB482B300A4CAD7 /* DriversTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversTableViewCell.swift; sourceTree = "<group>"; };
 		63BCBF1E1CB4909F00A4CAD7 /* DriversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversTableViewController.swift; sourceTree = "<group>"; };
+		63BCBF261CB4ACB900A4CAD7 /* PaxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFBB6071CB4347D002AB93C /* Main.storyboard */,
+				63BCBF261CB4ACB900A4CAD7 /* PaxViewController.swift */,
 				63BCBF1E1CB4909F00A4CAD7 /* DriversTableViewController.swift */,
 				63BCBF1C1CB482B300A4CAD7 /* DriversTableViewCell.swift */,
 				3AFBB6351CB47332002AB93C /* UserInfo.swift */,
@@ -120,7 +121,6 @@
 				63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */,
 				3AFBB6051CB4347D002AB93C /* ViewController.swift */,
 				3AFBB6331CB439B0002AB93C /* DriverViewController.swift */,
-				3AFBB6311CB4355D002AB93C /* CarPaxerViewController.swift */,
 				3AFBB60A1CB4347D002AB93C /* Assets.xcassets */,
 				3AFBB60C1CB4347D002AB93C /* LaunchScreen.storyboard */,
 				3AFBB60F1CB4347D002AB93C /* Info.plist */,
@@ -285,8 +285,8 @@
 				63BCBF1F1CB4909F00A4CAD7 /* DriversTableViewController.swift in Sources */,
 				3AFBB6041CB4347D002AB93C /* AppDelegate.swift in Sources */,
 				3AFBB6361CB47332002AB93C /* UserInfo.swift in Sources */,
-				3AFBB6321CB4355D002AB93C /* CarPaxerViewController.swift in Sources */,
 				63BCBF1D1CB482B300A4CAD7 /* DriversTableViewCell.swift in Sources */,
+				63BCBF271CB4ACB900A4CAD7 /* PaxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

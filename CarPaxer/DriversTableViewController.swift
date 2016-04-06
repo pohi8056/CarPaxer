@@ -42,12 +42,21 @@ class DriversTableViewController: UITableViewController {
         return drivers.count
     }
 
+    func prepareForSegue(segue: UIStoryboardSegue, cellForRowAtIndexPath indexPath: NSIndexPath, sender: AnyObject?) {
+        let driver = drivers[indexPath.row]
+        
+        if segue.identifier == "toPaxViewController" {
+            let paxViewController = segue.destinationViewController as! PaxViewController
+            paxViewController.msg.text = driver.carOwner
+        }
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "DriversTableViewCell"
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DriversTableViewCell
-
+        
+        
         let driver = drivers[indexPath.row]
 
         cell.driverName.text = driver.carOwner
