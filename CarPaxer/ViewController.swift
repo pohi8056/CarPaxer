@@ -24,21 +24,12 @@ class ViewController: UIViewController {
         userButton.enabled = false
     }
 
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
- /*
-    @IBAction func textFieldIsActive(sender: UITextField) {
-        if nameField.text != ""{
-            driverButton.enabled = true
-            userButton.enabled = true
-        }
-    }
-*/
     @IBAction func editingTextField(sender: UITextField) {
         if nameField.text != ""{
             driverButton.enabled = true

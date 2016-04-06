@@ -11,21 +11,33 @@ import UIKit
 class DriverViewController: UIViewController {
 
     @IBOutlet weak var welcomeMsg: UILabel!
-    
+    @IBOutlet weak var numberOfSeatsText: UILabel!
     @IBOutlet weak var numberOfSeats: UISlider!
     
     
     var newName : String = "Welcome, "
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeMsg.text = "Welcome, \(newName)"
-        // Do any additional setup after loading the view.
+        numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seats in my car."
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func changeValueOfSlider(sender: UISlider) {
+        
+        if Int(numberOfSeats.value) == 1{
+            numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seat in my car."
+        }else{
+            numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seats in my car."
+        }
+    }
+    
     
 
     /*
