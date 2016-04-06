@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -149,32 +149,42 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of available seats:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-0Y-Yi8">
-                                <rect key="frame" x="20" y="206" width="560" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have X number of available seats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-0Y-Yi8">
+                                <rect key="frame" x="20" y="232" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="Goy-ir-D86">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="Goy-ir-D86">
                                 <rect key="frame" x="136" y="285" width="329" height="31"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="changeValueOfSlider:" destination="1na-sk-PnQ" eventType="valueChanged" id="5vX-fb-HWh"/>
+                                </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-54-m1M">
+                                <rect key="frame" x="227" y="359" width="147" height="30"/>
+                                <state key="normal" title="Activate Pax Machine"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="trailing" id="B97-Qq-Y9F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Goy-ir-D86" secondAttribute="trailing" constant="117" id="Bpa-Cu-Z6f"/>
-                            <constraint firstItem="Goy-ir-D86" firstAttribute="top" secondItem="sEm-0Y-Yi8" secondAttribute="bottom" constant="58" id="Clu-rW-QBc"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="leading" id="RAS-TK-5RB"/>
-                            <constraint firstItem="ONA-qZ-Z3d" firstAttribute="top" secondItem="f8g-bM-JQb" secondAttribute="bottom" id="Yun-E7-NoU"/>
-                            <constraint firstItem="Goy-ir-D86" firstAttribute="leading" secondItem="ial-Jg-zvV" secondAttribute="leadingMargin" constant="118" id="fJa-0x-R6J"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="leading" id="ix4-fZ-Pva"/>
-                            <constraint firstItem="sEm-0Y-Yi8" firstAttribute="top" secondItem="ONA-qZ-Z3d" secondAttribute="bottom" constant="121" id="lH7-Oz-EUn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="trailing" id="o9z-XJ-UIS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="trailing" id="5tl-ol-BME"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="leading" id="9h1-y2-bD7"/>
+                            <constraint firstItem="ONA-qZ-Z3d" firstAttribute="top" secondItem="f8g-bM-JQb" secondAttribute="bottom" id="FoF-ma-T25"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="leading" id="ZEB-U1-tgq"/>
+                            <constraint firstItem="Goy-ir-D86" firstAttribute="top" secondItem="sEm-0Y-Yi8" secondAttribute="bottom" constant="32" id="b9j-5Q-KgO"/>
+                            <constraint firstItem="d9l-54-m1M" firstAttribute="top" secondItem="Goy-ir-D86" secondAttribute="bottom" constant="44" id="bu4-gZ-eXU"/>
+                            <constraint firstItem="Goy-ir-D86" firstAttribute="leading" secondItem="ial-Jg-zvV" secondAttribute="leadingMargin" constant="118" id="env-s4-enk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Goy-ir-D86" secondAttribute="trailing" constant="117" id="g8d-28-8bl"/>
+                            <constraint firstItem="d9l-54-m1M" firstAttribute="centerX" secondItem="Goy-ir-D86" secondAttribute="centerX" id="ndw-AI-JOl"/>
+                            <constraint firstItem="sEm-0Y-Yi8" firstAttribute="top" secondItem="ONA-qZ-Z3d" secondAttribute="bottom" constant="147" id="uGu-M2-AMh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="trailing" id="uJe-tc-GL1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="numberOfSeats" destination="Goy-ir-D86" id="Oyh-cH-SnL"/>
+                        <outlet property="numberOfSeatsText" destination="sEm-0Y-Yi8" id="cGt-vs-5zv"/>
                         <outlet property="welcomeMsg" destination="ONA-qZ-Z3d" id="HA2-wI-dWo"/>
                     </connections>
                 </viewController>
