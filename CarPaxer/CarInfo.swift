@@ -16,11 +16,11 @@ class CarInfo{
     var remainingSeats: Int
     var listOfUsers: [UserInfo]
     
-    init(carOwner: String, availableSeats: Int, remainingSeats: Int, listOfUsers: [UserInfo]){
+    init(carOwner: String, availableSeats: Int){
         self.carOwner = carOwner
         self.availableSeats = availableSeats
-        self.remainingSeats = remainingSeats
-        self.listOfUsers = listOfUsers
+        self.remainingSeats = availableSeats
+        self.listOfUsers = []
     }
   
     

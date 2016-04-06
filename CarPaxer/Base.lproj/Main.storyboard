@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="572" y="57"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Drivers Table View Controller-->
         <scene sceneID="Z5p-xH-ShK">
             <objects>
-                <tableViewController id="iTD-2Q-1J3" sceneMemberID="viewController">
+                <tableViewController id="iTD-2Q-1J3" customClass="DriversTableViewController" customModule="CarPaxer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lwa-h9-VrV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
