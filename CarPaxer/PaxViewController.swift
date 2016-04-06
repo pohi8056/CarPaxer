@@ -14,10 +14,13 @@ class PaxViewController: UIViewController {
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayAvailable: UILabel!
     
+    @IBAction func paxButton(sender: UIButton) {
+        
+    }
     
     
-    var driverName: String = "dfgdfg"
-    var availableSeats: String = "-"
+    var driverName: String = "Empty"
+    var availableSeats: String = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
