@@ -10,9 +10,17 @@ import UIKit
 
 class LobbyViewController: UIViewController {
 
+    @IBOutlet weak var hangoutName: UILabel!
+    @IBOutlet weak var usersInRoom: UILabel!
+    @IBOutlet weak var availableSeatsLeftText: UILabel!
+    
+    var newHangoutName : String = ""
+    var availableSeatsLeftInt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hangoutName.text = newHangoutName
+        availableSeatsLeftText.text = "Available seats left: \(availableSeatsLeftInt)"
     }
  
     

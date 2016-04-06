@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         if nameField.text != ""{
             driverButton.enabled = true
             userButton.enabled = true
+        }else{
+            driverButton.enabled = false
+            userButton.enabled = false
         }
     }
     

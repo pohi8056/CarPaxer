@@ -39,8 +39,8 @@ class DriverViewController: UIViewController {
     }
     
     
-
-    /*
+/*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,6 +48,14 @@ class DriverViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+  */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toLobbyView" {
+            let lobbyViewController = segue.destinationViewController as! LobbyViewController
+            lobbyViewController.newHangoutName = newName
+            lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
+        }
+    }
 
 }
