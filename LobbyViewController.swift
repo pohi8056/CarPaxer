@@ -26,10 +26,11 @@ class LobbyViewController: UIViewController {
         availableSeatsLeftText.text = "Available seats left: \(availableSeatsLeftInt)"
         
         loadPassengers()
-        
-        func setProgress() {
-            progressBar.progress = 1 / Float(availableSeatsLeftInt)
-        }
+        setProgress()
+    }
+    
+    func setProgress() {
+        progressBar.progress = Float(availableSeatsLeftInt) / 7
     }
     
     func loadPassengers() {
