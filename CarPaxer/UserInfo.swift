@@ -12,4 +12,14 @@ class UserInfo{
 
 
     
+    var hasCar: Bool
+    var hasReservedSeat: Bool
+    var car: CarInfo
+    
+    init(hasCar: Bool, hasReservedSeat: Bool, car: CarInfo){
+        self.hasCar = hasCar
+        self.hasReservedSeat = false
+        self.car = car
+    }
+    
 }
