@@ -16,6 +16,7 @@ class LobbyViewController: UIViewController {
     
     var newHangoutName : String = ""
     var availableSeatsLeftInt = 0
+    var users = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
