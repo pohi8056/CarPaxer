@@ -14,13 +14,13 @@ class UserInfo{
     var name: String
     var hasCar: Bool
     var hasReservedSeat: Bool
-    var car: CarInfo
+    //var car: CarInfo
     
-    init(name: String, hasCar: Bool, hasReservedSeat: Bool, car: CarInfo){
+    init(name: String){
         self.name = name
-        self.hasCar = hasCar
-        self.hasReservedSeat = false
-        self.car = car
+        hasCar = false
+        hasReservedSeat = false
+        //self.car = car
     }
     
 }
