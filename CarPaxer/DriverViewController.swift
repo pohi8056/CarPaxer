@@ -55,9 +55,9 @@ class DriverViewController: UIViewController {
             let lobbyViewController = segue.destinationViewController as! LobbyViewController
             lobbyViewController.newHangoutName = newName
             lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
-            //var newCarInfo : CarInfo = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
-            //DriversTableViewController.loadDrivers(newCarInfo)
-
+            let driverViewController = DriversTableViewController()
+            let newCarInfo : CarInfo = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
+            driverViewController.loadDrivers(newCarInfo)
         }
     }
 
