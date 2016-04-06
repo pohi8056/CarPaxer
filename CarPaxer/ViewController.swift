@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var driverButton: UIButton!
     @IBOutlet weak var userButton: UIButton!
     
-    
+    var db : Database?
     //userButton.enabled = false
     
     override func viewDidLoad() {

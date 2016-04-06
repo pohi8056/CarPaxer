@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class DriverViewController: UIViewController {
 
     @IBOutlet weak var welcomeMsg: UILabel!
@@ -55,9 +57,6 @@ class DriverViewController: UIViewController {
             let lobbyViewController = segue.destinationViewController as! LobbyViewController
             lobbyViewController.newHangoutName = newName
             lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
-            let driverViewController = DriversTableViewController()
-            let newCarInfo : CarInfo = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
-            driverViewController.loadDrivers(newCarInfo)
         }
     }
 
