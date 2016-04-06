@@ -12,8 +12,9 @@ class PaxViewController: UIViewController {
 
     
     @IBOutlet weak var msg: UILabel!
+   
     
-    var driverName: String = ""
+    var driverName: String = "dfgdfg"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -41,15 +41,6 @@ class DriversTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return drivers.count
     }
-
-    func prepareForSegue(segue: UIStoryboardSegue, cellForRowAtIndexPath indexPath: NSIndexPath, sender: AnyObject?) {
-        let driver = drivers[indexPath.row]
-        
-        if segue.identifier == "toPaxViewController" {
-            let paxViewController = segue.destinationViewController as! PaxViewController
-            paxViewController.msg.text = driver.carOwner
-        }
-    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "DriversTableViewCell"
@@ -65,6 +56,17 @@ class DriversTableViewController: UITableViewController {
         
         return cell
     }
+    
+    /*
+    func prepareForSegue(segue: UIStoryboardSegue, cellForRowAtIndexPath indexPath: NSIndexPath, sender: AnyObject?) {
+        let driver = drivers[indexPath.row]
+        
+        if segue.identifier == "toPaxViewController" {
+            let paxViewController = segue.destinationViewController as! PaxViewController
+            paxViewController.driverName = driver.carOwner
+        }
+    }
+    */
     
 
     /*

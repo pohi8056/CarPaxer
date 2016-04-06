@@ -141,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-Ne-TGq">
-                                <rect key="frame" x="65" y="104" width="42" height="21"/>
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -149,13 +149,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="leading" secondItem="V59-2B-lJH" secondAttribute="leadingMargin" constant="45" id="Rh9-5f-5ZL"/>
-                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="top" secondItem="hei-uf-bnA" secondAttribute="bottom" constant="40" id="Yye-Tb-Kmv"/>
+                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="centerX" secondItem="V59-2B-lJH" secondAttribute="centerX" id="7m2-xX-JnV"/>
+                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="centerY" secondItem="V59-2B-lJH" secondAttribute="centerY" id="E7k-WD-775"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="driverName" destination="XN5-Ne-TGq" id="tMZ-YJ-zng"/>
-                        <outlet property="nameLabel" destination="XN5-Ne-TGq" id="M29-Xl-fVZ"/>
+                        <outlet property="msg" destination="XN5-Ne-TGq" id="p14-vr-noP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZb-cz-7a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
