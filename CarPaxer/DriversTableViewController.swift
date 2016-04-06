@@ -53,9 +53,20 @@ class DriversTableViewController: UITableViewController {
         cell.driverName.text = driver.carOwner
         cell.availableSeats.text = String(driver.availableSeats)
         
-        
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toPaxView") {
+            let viewController = segue.destinationViewController as! PaxViewController
+            
+            let path = self.tableView.indexPathForSelectedRow!
+            let driver = drivers[path.row]
+            viewController.driverName = driver.carOwner
+            viewController.availableSeats = String(driver.availableSeats)
+        }
+    }
+    
     
     /*
     func prepareForSegue(segue: UIStoryboardSegue, cellForRowAtIndexPath indexPath: NSIndexPath, sender: AnyObject?) {

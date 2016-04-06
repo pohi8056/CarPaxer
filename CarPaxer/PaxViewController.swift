@@ -11,15 +11,18 @@ import UIKit
 class PaxViewController: UIViewController {
 
     
-    @IBOutlet weak var msg: UILabel!
-   
+    @IBOutlet weak var displayName: UILabel!
+    
+    @IBOutlet weak var displayAvailable: UILabel!
     
     var driverName: String = "dfgdfg"
+    var availableSeats: String = "-"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        msg.text = driverName
+        displayName.text = driverName
+        displayAvailable.text = availableSeats
         // Do any additional setup after loading the view.
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbE-s4-eg1" id="P7w-wN-fXY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available seats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0G-sI-kXV">
@@ -114,7 +114,7 @@
                                 <connections>
                                     <outlet property="availableSeats" destination="x9W-TF-BCU" id="GZS-hx-AY6"/>
                                     <outlet property="driverName" destination="FPK-uC-2DQ" id="tCs-wU-aHX"/>
-                                    <segue destination="Tcm-5E-3l1" kind="show" identifier="toPaxViewController" id="pf0-mQ-Kjd"/>
+                                    <segue destination="Tcm-5E-3l1" kind="show" identifier="toPaxView" id="pf0-mQ-Kjd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,21 +140,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-Ne-TGq">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-Ne-TGq">
+                                <rect key="frame" x="116" y="135" width="46" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzJ-a1-7ld">
+                                <rect key="frame" x="50" y="135" width="53" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available seats:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-VX-5Wa">
+                                <rect key="frame" x="50" y="167" width="124" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available seats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RO4-HI-L5W">
+                                <rect key="frame" x="187" y="167" width="113" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="centerX" secondItem="V59-2B-lJH" secondAttribute="centerX" id="7m2-xX-JnV"/>
-                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="centerY" secondItem="V59-2B-lJH" secondAttribute="centerY" id="E7k-WD-775"/>
+                            <constraint firstItem="rzJ-a1-7ld" firstAttribute="leading" secondItem="V59-2B-lJH" secondAttribute="leadingMargin" constant="30" id="CLX-YQ-Pu7"/>
+                            <constraint firstItem="ETO-VX-5Wa" firstAttribute="top" secondItem="rzJ-a1-7ld" secondAttribute="bottom" constant="8" id="DbM-cA-YLJ"/>
+                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="leading" secondItem="rzJ-a1-7ld" secondAttribute="trailing" constant="13" id="Jzf-DY-tv3"/>
+                            <constraint firstItem="RO4-HI-L5W" firstAttribute="leading" secondItem="ETO-VX-5Wa" secondAttribute="trailing" constant="13" id="Nab-3i-3qa"/>
+                            <constraint firstItem="RO4-HI-L5W" firstAttribute="top" secondItem="XN5-Ne-TGq" secondAttribute="bottom" constant="8" id="PUg-hC-n08"/>
+                            <constraint firstItem="XN5-Ne-TGq" firstAttribute="top" secondItem="hei-uf-bnA" secondAttribute="bottom" constant="71" id="bs4-wg-B3n"/>
+                            <constraint firstItem="ETO-VX-5Wa" firstAttribute="leading" secondItem="V59-2B-lJH" secondAttribute="leadingMargin" constant="30" id="cXE-Bk-qgV"/>
+                            <constraint firstItem="rzJ-a1-7ld" firstAttribute="top" secondItem="hei-uf-bnA" secondAttribute="bottom" constant="71" id="fIh-e7-HXf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="msg" destination="XN5-Ne-TGq" id="p14-vr-noP"/>
+                        <outlet property="displayAvailable" destination="RO4-HI-L5W" id="eLe-P1-Ge3"/>
+                        <outlet property="displayName" destination="XN5-Ne-TGq" id="bEk-Jq-9BT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZb-cz-7a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
