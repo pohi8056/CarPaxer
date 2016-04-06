@@ -15,14 +15,14 @@ class DriversTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDrivers()
+        //loadDrivers()
     }
     
-    func loadDrivers() {
-        let driver1 = CarInfo(carOwner: "Gustavs sportbil", availableSeats: 4)
-        let driver2 = CarInfo(carOwner: "Antons racerbuss", availableSeats: 7)
+    func loadDrivers(driver: CarInfo) {
+        //let driver1 = CarInfo(carOwner: "Gustavs sportbil", availableSeats: 4)
+        //let driver2 = CarInfo(carOwner: "Antons racerbuss", availableSeats: 7)
         
-        drivers += [driver1, driver2]
+        drivers += [driver]
     }
 
     override func didReceiveMemoryWarning() {

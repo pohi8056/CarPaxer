@@ -12,8 +12,9 @@ class PaxViewController: UIViewController {
 
     
     @IBOutlet weak var displayName: UILabel!
-    
     @IBOutlet weak var displayAvailable: UILabel!
+    
+    
     
     var driverName: String = "dfgdfg"
     var availableSeats: String = "-"
