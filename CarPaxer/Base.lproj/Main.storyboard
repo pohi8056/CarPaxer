@@ -22,6 +22,9 @@
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="FSC-8A-VIH"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69m-G9-1Fx">
                                 <rect key="frame" x="313" y="110" width="33" height="30"/>
@@ -51,7 +54,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="l6f-GC-mJg"/>
                     <connections>
+                        <outlet property="driverButton" destination="9mv-Cs-qmS" id="dtH-MK-BTB"/>
                         <outlet property="nameField" destination="m4G-dM-OnI" id="wk3-qs-tNw"/>
+                        <outlet property="userButton" destination="69m-G9-1Fx" id="o4a-dI-uDE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,21 +143,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-qZ-Z3d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-qZ-Z3d">
                                 <rect key="frame" x="20" y="64" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of available seats:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-0Y-Yi8">
+                                <rect key="frame" x="20" y="206" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="Goy-ir-D86">
+                                <rect key="frame" x="136" y="285" width="329" height="31"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="trailing" id="B97-Qq-Y9F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Goy-ir-D86" secondAttribute="trailing" constant="117" id="Bpa-Cu-Z6f"/>
+                            <constraint firstItem="Goy-ir-D86" firstAttribute="top" secondItem="sEm-0Y-Yi8" secondAttribute="bottom" constant="58" id="Clu-rW-QBc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="leading" id="RAS-TK-5RB"/>
                             <constraint firstItem="ONA-qZ-Z3d" firstAttribute="top" secondItem="f8g-bM-JQb" secondAttribute="bottom" id="Yun-E7-NoU"/>
+                            <constraint firstItem="Goy-ir-D86" firstAttribute="leading" secondItem="ial-Jg-zvV" secondAttribute="leadingMargin" constant="118" id="fJa-0x-R6J"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ONA-qZ-Z3d" secondAttribute="leading" id="ix4-fZ-Pva"/>
+                            <constraint firstItem="sEm-0Y-Yi8" firstAttribute="top" secondItem="ONA-qZ-Z3d" secondAttribute="bottom" constant="121" id="lH7-Oz-EUn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sEm-0Y-Yi8" secondAttribute="trailing" id="o9z-XJ-UIS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="numberOfSeats" destination="Goy-ir-D86" id="Oyh-cH-SnL"/>
                         <outlet property="welcomeMsg" destination="ONA-qZ-Z3d" id="HA2-wI-dWo"/>
                     </connections>
                 </viewController>
