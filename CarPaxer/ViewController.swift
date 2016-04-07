@@ -15,13 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var driverButton: UIButton!
     @IBOutlet weak var userButton: UIButton!
     
-    var db : Database?
+    var db : Database? = Database()
     //userButton.enabled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         driverButton.enabled = false
         userButton.enabled = false
+        print(db?.carArray)
     }
 
     
@@ -44,8 +45,23 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toDriverView" {
             let driverViewController = segue.destinationViewController as! DriverViewController
-            driverViewController.newName = nameField.text!
+            let newUser = UserInfo(name: nameField.text!)
+            //db = Database()
+            db?.userArray.append(newUser)
+            print(db?.userArray.last!.name)
+            //driverViewController.newName = nameField.text!
+            driverViewController.db = db
         }
+        
+        if segue.identifier == "toUsersView" {
+            let userViewController = segue.destinationViewController as! DriversTableViewController
+            let newUser = UserInfo(name: nameField.text!)
+            db?.userArray.append(newUser)
+            print("LOLOLOL")
+            //driverViewController.newName = nameField.text!
+            userViewController.db = db
+        }
+        
     }
 
 }
