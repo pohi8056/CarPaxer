@@ -30,7 +30,7 @@ class LobbyViewController: UIViewController {
     }
     
     func setProgress() {
-        progressBar.progress = Float(availableSeatsLeftInt) / 7
+        progressBar.progress = Float(availableSeatsLeftInt) / 7.0
     }
     
     func loadPassengers() {

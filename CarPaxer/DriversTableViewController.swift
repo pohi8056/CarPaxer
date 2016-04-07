@@ -11,18 +11,24 @@ import UIKit
 class DriversTableViewController: UITableViewController {
 
     var drivers = [CarInfo]()
+    var db : Database?
+    var randString = ["Racerbil", "Sportbil", "Rallybil"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //loadDrivers()
+        loadDrivers()
     }
     
-    func loadDrivers(driver: CarInfo) {
-        //let driver1 = CarInfo(carOwner: "Gustavs sportbil", availableSeats: 4)
-        //let driver2 = CarInfo(carOwner: "Antons racerbuss", availableSeats: 7)
+    func loadDrivers() {
+
+        print(db?.carArray)
+        for var i = 0; i < db?.carArray.count; i += 1{
+            drivers.append((db?.carArray[i])!)
+        }
         
-        drivers += [driver]
+        //let driver1 = db?.carArray.last!
+        //drivers.append(driver1!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +56,7 @@ class DriversTableViewController: UITableViewController {
         
         let driver = drivers[indexPath.row]
 
-        cell.driverName.text = driver.carOwner
+        cell.driverName.text = "\(driver.carOwner)'s \(randString[Int(arc4random_uniform(3))])"
         cell.availableSeats.text = String(driver.availableSeats)
         
         return cell

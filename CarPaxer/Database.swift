@@ -29,4 +29,8 @@ class Database{
         userArray += [newUser]
     }
     
+    func returnLatestUser() -> UserInfo{
+        return userArray.last!
+    }
+    
 }

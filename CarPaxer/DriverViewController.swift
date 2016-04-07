@@ -18,11 +18,14 @@ class DriverViewController: UIViewController {
     
     
     var newName : String = "Welcome, "
-    
+    var db : Database?
     override func viewDidLoad() {
         super.viewDidLoad()
+        newName = (db?.userArray.last!.name)!
         welcomeMsg.text = "Welcome, \(newName)"
         numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seats in my car."
+        print(db?.carArray)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +55,21 @@ class DriverViewController: UIViewController {
     }
   */
     
+    func updateCarInfo(){
+        let newCar = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
+        newCar.remainingSeats = Int(numberOfSeats.value)
+        db?.carArray.append(newCar)
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toLobbyView" {
             let lobbyViewController = segue.destinationViewController as! LobbyViewController
             lobbyViewController.newHangoutName = newName
             lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
+
+            updateCarInfo()
+            
         }
     }
 

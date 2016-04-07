@@ -23,4 +23,7 @@ class UserInfo{
         //self.car = car
     }
     
+    func returnName() -> String{
+        return name
+    }
 }
