@@ -10,6 +10,7 @@ import UIKit
 
 class PaxViewController: UIViewController {
 
+    var db : Database?
     
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayAvailable: UILabel!

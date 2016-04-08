@@ -57,7 +57,6 @@ class ViewController: UIViewController {
             let userViewController = segue.destinationViewController as! DriversTableViewController
             let newUser = UserInfo(name: nameField.text!)
             db?.userArray.append(newUser)
-            print("LOLOLOL")
             //driverViewController.newName = nameField.text!
             userViewController.db = db
         }

@@ -293,38 +293,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yM2-r5-msF">
-                                <rect key="frame" x="161" y="237" width="279" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="279" id="iBA-io-2KK"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NPh-za-SgR" customClass="PassengerTableViewCell" customModule="CarPaxer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="279" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NPh-za-SgR" id="gXS-cy-HEX">
-                                            <rect key="frame" x="0.0" y="0.0" width="279" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passenger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCP-S5-Al9">
-                                                    <rect key="frame" x="8" y="10" width="78" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tCP-S5-Al9" firstAttribute="centerY" secondItem="gXS-cy-HEX" secondAttribute="centerY" id="IST-p6-VIf"/>
-                                                <constraint firstItem="tCP-S5-Al9" firstAttribute="leading" secondItem="gXS-cy-HEX" secondAttribute="leadingMargin" id="Rl4-os-uFf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="passengerName" destination="tCP-S5-Al9" id="cTb-qU-LjH"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-Os-Ehr">
                                 <rect key="frame" x="20" y="174" width="560" height="2"/>
                             </progressView>
@@ -337,9 +305,6 @@
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="PVx-X2-x0K"/>
                             <constraint firstItem="Jhw-Os-Ehr" firstAttribute="leading" secondItem="wpm-nC-Hpb" secondAttribute="leading" id="QFz-7C-J9u"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="Jhw-Os-Ehr" secondAttribute="bottom" constant="17" id="Rpe-Ds-hJf"/>
-                            <constraint firstItem="yM2-r5-msF" firstAttribute="top" secondItem="wpm-nC-Hpb" secondAttribute="bottom" constant="20.5" id="St2-zY-ZKa"/>
-                            <constraint firstItem="yM2-r5-msF" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="T63-HS-lJ8"/>
-                            <constraint firstItem="PTr-eB-yw8" firstAttribute="top" secondItem="yM2-r5-msF" secondAttribute="bottom" constant="63" id="beO-xb-iCD"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="bhf-Rx-XbJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rya-wO-pUc" secondAttribute="trailing" id="fIZ-ye-rRK"/>
                             <constraint firstItem="Jhw-Os-Ehr" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="g2C-Fq-R8i"/>
@@ -378,6 +343,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1cq-Xd-Q7L"/>
+        <segue reference="SSi-j7-IUq"/>
     </inferredMetricsTieBreakers>
 </document>

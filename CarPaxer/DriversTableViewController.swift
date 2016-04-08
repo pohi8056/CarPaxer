@@ -64,12 +64,17 @@ class DriversTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toPaxView") {
-            let viewController = segue.destinationViewController as! PaxViewController
+            let paxViewController = segue.destinationViewController as! PaxViewController
             
             let path = self.tableView.indexPathForSelectedRow!
             let driver = drivers[path.row]
-            viewController.driverName = driver.carOwner
-            viewController.availableSeats = String(driver.availableSeats)
+            paxViewController.driverName = driver.carOwner
+            paxViewController.availableSeats = String(driver.availableSeats)
+            
+            //db = Database()
+            //print(db?.userArray.last!.name)
+            //driverViewController.newName = nameField.text!
+            paxViewController.db = db
         }
     }
     
