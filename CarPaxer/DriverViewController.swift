@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class DriverViewController: UIViewController {
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/")
 
     @IBOutlet weak var welcomeMsg: UILabel!
     @IBOutlet weak var numberOfSeatsText: UILabel!
@@ -59,6 +60,8 @@ class DriverViewController: UIViewController {
         let newCar = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
         newCar.remainingSeats = Int(numberOfSeats.value)
         db?.carArray.append(newCar)
+        myRootRef.setValue(newName)
+
     }
     
     
