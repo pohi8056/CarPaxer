@@ -41,14 +41,18 @@ class LobbyViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         passengerTable.delegate = self
         passengerTable.dataSource = self
+        
+        loadPassengers()
     }
     
     func loadDriver() {
         
         print(db?.carArray)
         for (var i = 0; i < db?.carArray.count; i += 1) {
-            if (db?.carArray[i].carOwner == driverName) {
+            if (db?.carArray[i].carOwner == newHangoutName) {
+                print("newHangoutName: \(newHangoutName)")
                 driverno = i
+                print("driverno: \(driverno)")
             }
         }
     }
@@ -56,6 +60,7 @@ class LobbyViewController: UIViewController, UITableViewDataSource, UITableViewD
     func loadPassengers() {
         for (var i = 0; i < db?.carArray[driverno].listOfUsers.count; i += 1) {
             passengerList.append((db?.carArray[driverno].listOfUsers[i].name)!)
+            //print((db?.carArray[driverno].listOfUsers[i].name)!)
         }
         
     }
