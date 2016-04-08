@@ -16,7 +16,7 @@ struct OnlineBase{
     let ref : Firebase?
     let availableSeats : Int!
     let remainingSeats : Int!
-    let currentUsers : [String!]
+    let currentUsers : [String]!
     
     init(key : String, carName : String, availableSeats : Int){
         self.key = key
@@ -24,8 +24,18 @@ struct OnlineBase{
         self.ref = nil
         self.availableSeats = availableSeats
         self.remainingSeats = availableSeats
-        self.currentUsers = []
+        self.currentUsers = [""]
     }
+    
+    init(snapshot: FDataSnapshot) {
+        key = snapshot.key
+        availableSeats = snapshot.value["availableSeats"] as! Int
+        carName = snapshot.value["carName"] as! String
+        remainingSeats = snapshot.value["remainingSeats"] as! Int
+        currentUsers = snapshot.value["currentUsers"] as! [String]
+        ref = snapshot.ref
+    }
+    
     
     func toAnyObject() -> AnyObject{
         return [

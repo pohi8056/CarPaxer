@@ -7,18 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class DriversTableViewController: UITableViewController {
 
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars")
+
     var drivers = [CarInfo]()
+    var fdrivers = [OnlineBase]()
     var db : Database?
     var randString = ["Racerbil", "Sportbil", "Rallybil"]
     
+    
+    var userName = "Erik"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadDrivers()
+        //loadDrivers()
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+            var ftmpDrivers = [OnlineBase]()
+            
+            for car in snapshot.children{
+                let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                ftmpDrivers.append(fnewCarItem)
+            }
+            self.fdrivers = ftmpDrivers
+            self.tableView.reloadData()
+
+            
+        })
+        
+    }
+    
     
     func loadDrivers() {
 
@@ -45,7 +71,7 @@ class DriversTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return drivers.count
+        return fdrivers.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -54,9 +80,9 @@ class DriversTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DriversTableViewCell
         
         
-        let driver = drivers[indexPath.row]
+        let driver = fdrivers[indexPath.row]
 
-        cell.driverName.text = "\(driver.carOwner)'s \(randString[Int(arc4random_uniform(3))])"
+        cell.driverName.text = "\(driver.carName)'s \(randString[Int(arc4random_uniform(3))])"
         cell.availableSeats.text = String(driver.availableSeats)
         
         return cell
@@ -67,8 +93,13 @@ class DriversTableViewController: UITableViewController {
             let paxViewController = segue.destinationViewController as! PaxViewController
             
             let path = self.tableView.indexPathForSelectedRow!
-            let driver = drivers[path.row]
-            paxViewController.driverName = driver.carOwner
+            let driver = fdrivers[path.row]
+
+            //driver.ref?.updateChildValues(["currentUsers" : userName])
+            //paxViewController.driverName = driver.carOwner
+            paxViewController.driverName = driver.carName
+
+            
             //paxViewController.availableSeats = String(driver.availableSeats)
             
             //db = Database()
