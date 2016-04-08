@@ -70,7 +70,7 @@ class DriverViewController: UIViewController {
             let lobbyViewController = segue.destinationViewController as! LobbyViewController
             lobbyViewController.newHangoutName = newName
             lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
-
+            lobbyViewController.db = db
             updateCarInfo()
             
         }
