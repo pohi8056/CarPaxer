@@ -11,7 +11,7 @@ import Firebase
 
 
 class DriverViewController: UIViewController {
-    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/")
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars")
 
     @IBOutlet weak var welcomeMsg: UILabel!
     @IBOutlet weak var numberOfSeatsText: UILabel!
@@ -60,10 +60,15 @@ class DriverViewController: UIViewController {
         let newCar = CarInfo(carOwner: newName, availableSeats: Int(numberOfSeats.value))
         newCar.remainingSeats = Int(numberOfSeats.value)
         db?.carArray.append(newCar)
-        myRootRef.setValue(newName)
 
     }
     
+    func toFirebase(){
+        let fnewCar = OnlineBase(key: (db?.carArray.last!.carOwner)!, carName: (db?.carArray.last!.carOwner)!, availableSeats: (db?.carArray.last!.availableSeats)!)
+        let fnewCarRef = myRootRef.childByAppendingPath(newName)
+        fnewCarRef.setValue(fnewCar.toAnyObject())
+
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toLobbyView" {
@@ -72,6 +77,7 @@ class DriverViewController: UIViewController {
             lobbyViewController.availableSeatsLeftInt = Int(numberOfSeats.value)
             lobbyViewController.db = db
             updateCarInfo()
+            toFirebase()
             
         }
     }

@@ -11,7 +11,6 @@ import UIKit
 class LobbyViewController: UIViewController {
 
     var db : Database?
-    
     @IBOutlet weak var hangoutName: UILabel!
     @IBOutlet weak var availableSeatsLeftText: UILabel!
     
