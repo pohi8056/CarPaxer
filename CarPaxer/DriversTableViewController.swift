@@ -69,7 +69,7 @@ class DriversTableViewController: UITableViewController {
             let path = self.tableView.indexPathForSelectedRow!
             let driver = drivers[path.row]
             paxViewController.driverName = driver.carOwner
-            paxViewController.availableSeats = String(driver.availableSeats)
+            //paxViewController.availableSeats = String(driver.availableSeats)
             
             //db = Database()
             //print(db?.userArray.last!.name)

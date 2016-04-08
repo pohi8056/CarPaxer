@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbE-s4-eg1" id="P7w-wN-fXY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available seats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0G-sI-kXV">
@@ -287,7 +287,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paxed users:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpm-nC-Hpb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passengers:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpm-nC-Hpb">
                                 <rect key="frame" x="20" y="193" width="560" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,19 +296,37 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-Os-Ehr">
                                 <rect key="frame" x="20" y="174" width="560" height="2"/>
                             </progressView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xLk-T7-qSV">
+                                <rect key="frame" x="20" y="243" width="560" height="349"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" id="Fh5-ZH-us5">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fh5-ZH-us5" id="duP-Aw-HYu">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="GS7-Y2-ot6" secondAttribute="bottom" constant="38" id="84E-X2-ked"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="HTf-IF-Qoo"/>
+                            <constraint firstItem="xLk-T7-qSV" firstAttribute="top" secondItem="jFb-Tg-SHe" secondAttribute="bottom" constant="179" id="KEx-j3-uWz"/>
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="LfT-c8-wfR"/>
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="trailing" secondItem="fiY-Wk-CSY" secondAttribute="trailingMargin" id="PVx-X2-x0K"/>
                             <constraint firstItem="Jhw-Os-Ehr" firstAttribute="leading" secondItem="wpm-nC-Hpb" secondAttribute="leading" id="QFz-7C-J9u"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xLk-T7-qSV" secondAttribute="leading" id="QKo-iw-ChY"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="top" secondItem="Jhw-Os-Ehr" secondAttribute="bottom" constant="17" id="Rpe-Ds-hJf"/>
                             <constraint firstItem="wpm-nC-Hpb" firstAttribute="leading" secondItem="fiY-Wk-CSY" secondAttribute="leadingMargin" id="bhf-Rx-XbJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rya-wO-pUc" secondAttribute="trailing" id="fIZ-ye-rRK"/>
                             <constraint firstItem="Jhw-Os-Ehr" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="g2C-Fq-R8i"/>
                             <constraint firstItem="Rya-wO-pUc" firstAttribute="top" secondItem="jFb-Tg-SHe" secondAttribute="bottom" constant="8" id="jCp-9t-QBD"/>
+                            <constraint firstItem="xLk-T7-qSV" firstAttribute="centerX" secondItem="fiY-Wk-CSY" secondAttribute="centerX" id="mKO-uR-5AU"/>
+                            <constraint firstItem="PTr-eB-yw8" firstAttribute="top" secondItem="xLk-T7-qSV" secondAttribute="bottom" constant="8" id="nQ6-88-gaA"/>
                             <constraint firstItem="GS7-Y2-ot6" firstAttribute="top" secondItem="Rya-wO-pUc" secondAttribute="bottom" constant="26" id="nZ2-MO-EPF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Rya-wO-pUc" secondAttribute="leading" id="wr4-P6-REH"/>
                         </constraints>
@@ -316,6 +334,7 @@
                     <connections>
                         <outlet property="availableSeatsLeftText" destination="GS7-Y2-ot6" id="dIK-iG-dW5"/>
                         <outlet property="hangoutName" destination="Rya-wO-pUc" id="30w-zT-ZS4"/>
+                        <outlet property="passengerTable" destination="xLk-T7-qSV" id="hLu-yY-hCl"/>
                         <outlet property="progressBar" destination="Jhw-Os-Ehr" id="NVp-WT-ycI"/>
                     </connections>
                 </viewController>
