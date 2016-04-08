@@ -39,7 +39,7 @@ class PaxViewController: UIViewController {
     
         print(db?.carArray)
         for (var i = 0; i < db?.carArray.count; i += 1) {
-            if (db?.carArray[i].carOwner == driverName) {
+            if (db?.carArray[i].carOwner == displayName.text) {
                 driverno = i
             }
         }
@@ -50,6 +50,7 @@ class PaxViewController: UIViewController {
             let lobbyViewController = segue.destinationViewController as! LobbyViewController
             
             lobbyViewController.newHangoutName = driverName
+            print("driverName: \(driverName)")
             lobbyViewController.availableSeatsLeftInt = (db?.carArray[driverno].availableSeats)!
             
             //db = Database()
