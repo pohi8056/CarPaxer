@@ -79,6 +79,7 @@ class ViewController: UIViewController {
             db?.userArray.append(newUser)
             //driverViewController.newName = nameField.text!
             userViewController.db = db
+            //userViewController.userName = nameField.text!
         }
         
     }

@@ -11,7 +11,7 @@ import Firebase
 
 class PaxViewController: UIViewController {
 
-   // var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars")
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars");
 
     var db : Database?
     var fdrivers = [OnlineBase]()
@@ -27,8 +27,12 @@ class PaxViewController: UIViewController {
     var availableSeats: String = "0"
     
     @IBAction func paxButton(sender: UIButton) {
-        
-        //fdrivers[driverno].availableSeats -= 1
+        let fnewCarRef = myRootRef.childByAppendingPath(fdrivers[driverno].carName)
+        let tmpAvail = fdrivers[driverno].availableSeats - 1
+        fnewCarRef.updateChildValues(["availableSeats" : tmpAvail])
+        //fnewCarRef.updateChildValues(["currentUsers" : tmpAvail])
+
+        //fdrivers[driverno].availableSeats -= 1;
         db?.carArray[driverno].availableSeats -= 1
         db?.carArray[driverno].listOfUsers.append(UserInfo(name: "Anton"))
     }
@@ -84,8 +88,8 @@ class PaxViewController: UIViewController {
             
             lobbyViewController.newHangoutName = driverName
             print("driverName: \(driverName)")
-            lobbyViewController.availableSeatsLeftInt = (db?.carArray[driverno].availableSeats)!
-            
+            lobbyViewController.availableSeatsLeftInt = fdrivers[driverno].availableSeats
+            lobbyViewController.fdrivers = fdrivers
             //db = Database()
             //print(db?.userArray.last!.name)
             //driverViewController.newName = nameField.text!

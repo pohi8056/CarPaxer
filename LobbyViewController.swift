@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LobbyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars");
+
     var db : Database?
-    
+    var fdrivers = [OnlineBase]()
     var passengerList = [String]()
     let textCellIdentifier = "TextCell"
     
@@ -33,16 +35,43 @@ class LobbyViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateValues()
+        
         hangoutName.text = newHangoutName
-        availableSeatsLeftText.text = "Available seats left: \(availableSeatsLeftInt)"
         
         loadDriver()
         setProgress()
+        //availableSeatsLeftInt = fdrivers[driverno].availableSeats
         
+        availableSeatsLeftText.text = "Available seats left: \(availableSeatsLeftInt)"
+
         passengerTable.delegate = self
         passengerTable.dataSource = self
         
         loadPassengers()
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        updateValues()
+
+    }
+    
+    
+    func updateValues(){
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+            var ftmpDrivers = [OnlineBase]()
+            
+            for car in snapshot.children{
+                let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                //let tmpInfo = fnewCarItem.returnCarInfo()
+                ftmpDrivers.append(fnewCarItem)
+                //self.db?.carArray.append(tmpInfo)
+            }
+            self.fdrivers = ftmpDrivers
+            //self.tableView.reloadData()
+        })
     }
     
     func loadDriver() {

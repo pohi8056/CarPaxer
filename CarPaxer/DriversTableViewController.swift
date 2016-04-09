@@ -19,7 +19,7 @@ class DriversTableViewController: UITableViewController {
     var randString = ["Racerbil", "Sportbil", "Rallybil"]
     
     
-    var userName = "Erik"
+    //var userName = "Erik"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +110,7 @@ class DriversTableViewController: UITableViewController {
             //print(db?.userArray.last!.name)
             //driverViewController.newName = nameField.text!
             paxViewController.fdrivers = fdrivers
+            //paxViewController.newUser = userName
             paxViewController.db = db
         }
     }
