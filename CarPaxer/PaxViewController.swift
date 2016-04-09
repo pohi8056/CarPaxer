@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class PaxViewController: UIViewController {
 
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars");
+
     var db : Database?
+    var fdrivers = [OnlineBase]()
+
+    //var fdrivers = [OnlineBase]()
     
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayAvailable: UILabel!
@@ -21,6 +27,12 @@ class PaxViewController: UIViewController {
     var availableSeats: String = "0"
     
     @IBAction func paxButton(sender: UIButton) {
+        let fnewCarRef = myRootRef.childByAppendingPath(fdrivers[driverno].carName)
+        let tmpAvail = fdrivers[driverno].availableSeats - 1
+        fnewCarRef.updateChildValues(["availableSeats" : tmpAvail])
+        //fnewCarRef.updateChildValues(["currentUsers" : tmpAvail])
+
+        //fdrivers[driverno].availableSeats -= 1;
         db?.carArray[driverno].availableSeats -= 1
         db?.carArray[driverno].listOfUsers.append(UserInfo(name: "Anton"))
     }
@@ -30,17 +42,40 @@ class PaxViewController: UIViewController {
 
         displayName.text = driverName
         loadDriver(displayName.text!)
+        displayName.text = fdrivers[driverno].carName
+        displayAvailable.text = String(fdrivers[driverno].availableSeats)
         
-        displayName.text = db?.carArray[driverno].carOwner
-        displayAvailable.text = String((db?.carArray[driverno].availableSeats)!)
+        //displayName.text = db?.carArray[driverno].carOwner
+        //displayAvailable.text = String((db?.carArray[driverno].availableSeats)!)
         
     }
+ /*
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+            var ftmpDrivers = [OnlineBase]()
+            
+            for car in snapshot.children{
+                let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                //let tmpInfo = fnewCarItem.returnCarInfo()
+                ftmpDrivers.append(fnewCarItem)
+                //self.db?.carArray.append(tmpInfo)
+            }
+            self.fdrivers = ftmpDrivers
+            //RELOAD?
+            
+            
+        })
+    }
+   */
+    
 
     func loadDriver(name: String) {
     
         print(db?.carArray)
-        for (var i = 0; i < db?.carArray.count; i += 1) {
-            if (db?.carArray[i].carOwner == name) {
+        for (var i = 0; i < fdrivers.count; i += 1) {
+            if (fdrivers[i].carName == name) {
                 driverno = i
                 print(driverno)
             }
@@ -53,8 +88,8 @@ class PaxViewController: UIViewController {
             
             lobbyViewController.newHangoutName = driverName
             print("driverName: \(driverName)")
-            lobbyViewController.availableSeatsLeftInt = (db?.carArray[driverno].availableSeats)!
-            
+            lobbyViewController.availableSeatsLeftInt = fdrivers[driverno].availableSeats
+            lobbyViewController.fdrivers = fdrivers
             //db = Database()
             //print(db?.userArray.last!.name)
             //driverViewController.newName = nameField.text!

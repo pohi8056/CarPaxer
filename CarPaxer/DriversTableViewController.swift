@@ -19,7 +19,7 @@ class DriversTableViewController: UITableViewController {
     var randString = ["Racerbil", "Sportbil", "Rallybil"]
     
     
-    var userName = "Erik"
+    //var userName = "Erik"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,17 +97,20 @@ class DriversTableViewController: UITableViewController {
             
             let path = self.tableView.indexPathForSelectedRow!
             let driver = fdrivers[path.row]
-
+            
             //driver.ref?.updateChildValues(["currentUsers" : userName])
             //paxViewController.driverName = driver.carOwner
-            paxViewController.driverName = driver.carName
-            //print(driver.carName)
             
+            paxViewController.driverName = driver.carName
+            
+            //paxViewController.driverno = fdrivers.count //SDFSDFSDFSDFS
             //paxViewController.availableSeats = String(driver.availableSeats)
             
             //db = Database()
             //print(db?.userArray.last!.name)
             //driverViewController.newName = nameField.text!
+            paxViewController.fdrivers = fdrivers
+            //paxViewController.newUser = userName
             paxViewController.db = db
         }
     }
