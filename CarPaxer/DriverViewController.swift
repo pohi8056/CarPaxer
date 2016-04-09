@@ -23,8 +23,8 @@ class DriverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newName = (db?.userArray.last!.name)!
-        welcomeMsg.text = "Welcome, \(newName)"
-        numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seats in my car."
+        welcomeMsg.text = "Welcome, \(newName)."
+        numberOfSeatsText.text = "Available seats: \(Int(numberOfSeats.value))"
         print(db?.carArray)
 
     }
@@ -37,11 +37,11 @@ class DriverViewController: UIViewController {
     
     @IBAction func changeValueOfSlider(sender: UISlider) {
         
-        if Int(numberOfSeats.value) == 1{
-            numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seat in my car."
-        }else{
-            numberOfSeatsText.text = "I have \(Int(numberOfSeats.value)) available seats in my car."
-        }
+        //if Int(numberOfSeats.value) == 1{
+            //numberOfSeatsText.text = "Available seat: \(Int(numberOfSeats.value))"
+        //}else{
+            numberOfSeatsText.text = "Available seats: \(Int(numberOfSeats.value))"
+        //}
     }
     
     
