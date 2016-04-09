@@ -29,18 +29,18 @@ class PaxViewController: UIViewController {
         super.viewDidLoad()
 
         displayName.text = driverName
-        loadDriver()
+        loadDriver(displayName.text!)
         
         displayName.text = db?.carArray[driverno].carOwner
         displayAvailable.text = String((db?.carArray[driverno].availableSeats)!)
         
     }
 
-    func loadDriver() {
+    func loadDriver(name: String) {
     
         print(db?.carArray)
         for (var i = 0; i < db?.carArray.count; i += 1) {
-            if (db?.carArray[i].carOwner == displayName.text) {
+            if (db?.carArray[i].carOwner == name) {
                 driverno = i
                 print(driverno)
             }
