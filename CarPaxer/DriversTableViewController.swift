@@ -101,7 +101,7 @@ class DriversTableViewController: UITableViewController {
             //driver.ref?.updateChildValues(["currentUsers" : userName])
             //paxViewController.driverName = driver.carOwner
             paxViewController.driverName = driver.carName
-
+            //print(driver.carName)
             
             //paxViewController.availableSeats = String(driver.availableSeats)
             
