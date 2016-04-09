@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class PaxViewController: UIViewController {
 
+   // var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars")
+
     var db : Database?
+    var fdrivers = [OnlineBase]()
+
+    //var fdrivers = [OnlineBase]()
     
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayAvailable: UILabel!
@@ -21,6 +27,8 @@ class PaxViewController: UIViewController {
     var availableSeats: String = "0"
     
     @IBAction func paxButton(sender: UIButton) {
+        
+        //fdrivers[driverno].availableSeats -= 1
         db?.carArray[driverno].availableSeats -= 1
         db?.carArray[driverno].listOfUsers.append(UserInfo(name: "Anton"))
     }
@@ -30,11 +38,34 @@ class PaxViewController: UIViewController {
 
         displayName.text = driverName
         loadDriver()
+        displayName.text = fdrivers[driverno].carName
+        displayAvailable.text = String(fdrivers[driverno].availableSeats)
         
-        displayName.text = db?.carArray[driverno].carOwner
-        displayAvailable.text = String((db?.carArray[driverno].availableSeats)!)
+        //displayName.text = db?.carArray[driverno].carOwner
+        //displayAvailable.text = String((db?.carArray[driverno].availableSeats)!)
         
     }
+ /*
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+            var ftmpDrivers = [OnlineBase]()
+            
+            for car in snapshot.children{
+                let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                //let tmpInfo = fnewCarItem.returnCarInfo()
+                ftmpDrivers.append(fnewCarItem)
+                //self.db?.carArray.append(tmpInfo)
+            }
+            self.fdrivers = ftmpDrivers
+            //RELOAD?
+            
+            
+        })
+    }
+   */
+    
 
     func loadDriver() {
     

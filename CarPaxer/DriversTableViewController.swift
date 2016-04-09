@@ -109,6 +109,7 @@ class DriversTableViewController: UITableViewController {
             //db = Database()
             //print(db?.userArray.last!.name)
             //driverViewController.newName = nameField.text!
+            paxViewController.fdrivers = fdrivers
             paxViewController.db = db
         }
     }
