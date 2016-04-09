@@ -24,6 +24,8 @@ class DriversTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //loadDrivers()
+        //loadDrivers()
+
     }
     
     
@@ -35,14 +37,15 @@ class DriversTableViewController: UITableViewController {
             
             for car in snapshot.children{
                 let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                //let tmpInfo = fnewCarItem.returnCarInfo()
                 ftmpDrivers.append(fnewCarItem)
+                //self.db?.carArray.append(tmpInfo)
             }
             self.fdrivers = ftmpDrivers
             self.tableView.reloadData()
-
+            
             
         })
-        
     }
     
     

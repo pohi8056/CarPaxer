@@ -41,6 +41,7 @@ class PaxViewController: UIViewController {
         for (var i = 0; i < db?.carArray.count; i += 1) {
             if (db?.carArray[i].carOwner == displayName.text) {
                 driverno = i
+                print(driverno)
             }
         }
     }
