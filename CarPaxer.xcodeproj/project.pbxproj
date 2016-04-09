@@ -19,6 +19,7 @@
 		3AFBB6341CB439B0002AB93C /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6331CB439B0002AB93C /* DriverViewController.swift */; };
 		3AFBB6361CB47332002AB93C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6351CB47332002AB93C /* UserInfo.swift */; };
 		3AFBB6381CB4736E002AB93C /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBB6371CB4736E002AB93C /* CarInfo.swift */; };
+		6312360B1CB8877A00758A3F /* testbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6312360A1CB8877A00758A3F /* testbg.png */; };
 		63BCBF1B1CB445DE00A4CAD7 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */; };
 		63BCBF1D1CB482B300A4CAD7 /* DriversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1C1CB482B300A4CAD7 /* DriversTableViewCell.swift */; };
 		63BCBF1F1CB4909F00A4CAD7 /* DriversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCBF1E1CB4909F00A4CAD7 /* DriversTableViewController.swift */; };
@@ -64,6 +65,7 @@
 		3AFBB6331CB439B0002AB93C /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
 		3AFBB6351CB47332002AB93C /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3AFBB6371CB4736E002AB93C /* CarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
+		6312360A1CB8877A00758A3F /* testbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testbg.png; path = graphics/testbg.png; sourceTree = "<group>"; };
 		63BCBF1A1CB445DE00A4CAD7 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LobbyViewController.swift; path = ../LobbyViewController.swift; sourceTree = "<group>"; };
 		63BCBF1C1CB482B300A4CAD7 /* DriversTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversTableViewCell.swift; sourceTree = "<group>"; };
 		63BCBF1E1CB4909F00A4CAD7 /* DriversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversTableViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		3AFBB6021CB4347D002AB93C /* CarPaxer */ = {
 			isa = PBXGroup;
 			children = (
+				6312360A1CB8877A00758A3F /* testbg.png */,
 				3AFBB6071CB4347D002AB93C /* Main.storyboard */,
 				3AC0189F1CB5880900E87621 /* Database.swift */,
 				3AABC8FE1CB8314400F3B0E5 /* OnlineBase.swift */,
@@ -289,6 +292,7 @@
 			files = (
 				3AFBB60E1CB4347D002AB93C /* LaunchScreen.storyboard in Resources */,
 				3AFBB60B1CB4347D002AB93C /* Assets.xcassets in Resources */,
+				6312360B1CB8877A00758A3F /* testbg.png in Resources */,
 				3AFBB6091CB4347D002AB93C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

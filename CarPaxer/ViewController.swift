@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         userButton.enabled = false
         print(db?.carArray)
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
