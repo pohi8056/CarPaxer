@@ -9,7 +9,7 @@
 import UIKit
 
 class LobbyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     var db : Database?
     
     var passengerList = [String]()

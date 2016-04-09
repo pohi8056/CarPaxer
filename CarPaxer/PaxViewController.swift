@@ -28,6 +28,7 @@ class PaxViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        displayName.text = driverName
         loadDriver()
         
         displayName.text = db?.carArray[driverno].carOwner
