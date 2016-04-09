@@ -22,6 +22,13 @@ class CarInfo{
         self.remainingSeats = availableSeats
         self.listOfUsers = []
     }
+    
+    init(){
+        self.carOwner = ""
+        self.availableSeats = 0
+        self.remainingSeats = 0
+        self.listOfUsers = []
+    }
   
     
 }

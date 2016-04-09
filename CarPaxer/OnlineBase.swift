@@ -36,6 +36,18 @@ struct OnlineBase{
         ref = snapshot.ref
     }
     
+    //   init(carOwner: String, availableSeats: Int){
+  //  self.carOwner = carOwner
+   // self.availableSeats = availableSeats
+    //self.remainingSeats = availableSeats
+    //self.listOfUsers = []
+    
+    
+    func returnCarInfo() -> CarInfo{
+        let tmpCarInfo = CarInfo(carOwner: carName, availableSeats: availableSeats)
+        return tmpCarInfo
+    }
+    
     
     func toAnyObject() -> AnyObject{
         return [

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-
+    var myRootRef = Firebase(url:"https://paxapp.firebaseio.com/Cars")
     @IBOutlet weak var nameField: UITextField!
 
     @IBOutlet weak var driverButton: UIButton!
@@ -23,6 +24,26 @@ class ViewController: UIViewController {
         driverButton.enabled = false
         userButton.enabled = false
         print(db?.carArray)
+        
+        
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+            var ftmpDrivers = [OnlineBase]()
+            
+            for car in snapshot.children{
+                let fnewCarItem = OnlineBase(snapshot: car as! FDataSnapshot)
+                let tmpInfo = fnewCarItem.returnCarInfo()
+                ftmpDrivers.append(fnewCarItem)
+                self.db?.carArray.append(tmpInfo)
+            }
+            
+
+            
+            //self.tableView.reloadData()
+            
+            
+        })
+        
+        
     }
 
     
