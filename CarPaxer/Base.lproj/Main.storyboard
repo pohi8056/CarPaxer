@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TqS-yV-Mgg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -57,19 +57,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eqO-qT-5lC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1UB-gO-fiO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eqO-qT-5lC" secondAttribute="bottom" constant="585" id="4tP-M1-Xkc"/>
                             <constraint firstItem="69m-G9-1Fx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9PA-QP-c3u"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eqO-qT-5lC" secondAttribute="bottom" constant="414" id="FWd-nC-BRB"/>
-                            <constraint firstItem="eqO-qT-5lC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="SDp-jH-Rxe"/>
+                            <constraint firstItem="69m-G9-1Fx" firstAttribute="top" secondItem="m4G-dM-OnI" secondAttribute="bottom" constant="55" id="KCD-aZ-BLZ"/>
                             <constraint firstItem="m4G-dM-OnI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UNH-Qk-A7U"/>
-                            <constraint firstItem="69m-G9-1Fx" firstAttribute="top" secondItem="m4G-dM-OnI" secondAttribute="bottom" constant="31" id="UWl-jd-3rd"/>
+                            <constraint firstItem="eqO-qT-5lC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="V7o-75-g5P"/>
                             <constraint firstItem="9mv-Cs-qmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WL9-AF-rxU"/>
+                            <constraint firstItem="m4G-dM-OnI" firstAttribute="top" secondItem="eqO-qT-5lC" secondAttribute="bottom" constant="29" id="YIM-mV-vQh"/>
                             <constraint firstItem="9mv-Cs-qmS" firstAttribute="top" secondItem="69m-G9-1Fx" secondAttribute="bottom" constant="18" id="cS4-cB-0WV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="m4G-dM-OnI" secondAttribute="leading" id="d3C-LH-b64"/>
                             <constraint firstItem="9mv-Cs-qmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gir-yA-xgl"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9mv-Cs-qmS" secondAttribute="bottom" constant="214" id="lWy-Vp-EyT"/>
-                            <constraint firstItem="m4G-dM-OnI" firstAttribute="top" secondItem="eqO-qT-5lC" secondAttribute="bottom" constant="47" id="puM-tI-6My"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m4G-dM-OnI" secondAttribute="trailing" id="tB3-TJ-YoU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V7o-75-g5P"/>
+                                <exclude reference="YIM-mV-vQh"/>
+                                <exclude reference="KCD-aZ-BLZ"/>
+                                <exclude reference="4tP-M1-Xkc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="V7o-75-g5P"/>
+                                <include reference="YIM-mV-vQh"/>
+                                <include reference="KCD-aZ-BLZ"/>
+                                <include reference="4tP-M1-Xkc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="l6f-GC-mJg"/>
                     <connections>
@@ -80,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="57"/>
+            <point key="canvasLocation" x="571.5" y="57"/>
         </scene>
         <!--Drivers Table View Controller-->
         <scene sceneID="Z5p-xH-ShK">
@@ -95,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbE-s4-eg1" id="P7w-wN-fXY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available seats:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0G-sI-kXV">
@@ -384,6 +399,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1cq-Xd-Q7L"/>
+        <segue reference="SSi-j7-IUq"/>
     </inferredMetricsTieBreakers>
 </document>
